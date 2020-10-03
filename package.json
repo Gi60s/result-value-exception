@@ -2,7 +2,8 @@
   "name": "result-value-exception",
   "version": "1.0.0",
   "description": "Produce an iterable result that contains a value, an exception, and a warning.",
-  "main": "dist/Result.js",
+  "main": "./dist/Result.js",
+  "types": "./dist/Result.d.ts",
   "scripts": {
     "test": "mocha test"
   },
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Gi60s/result-value-exception/issues"
   },
-  "homepage": "https://github.com/Gi60s/result-value-exception#readme"
+  "homepage": "https://github.com/Gi60s/result-value-exception#readme",
+  "dependencies": {
+    "exception-tree": "^1.0.3"
+  }
 }
