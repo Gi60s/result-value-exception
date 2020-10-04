@@ -1,14 +1,16 @@
-import { Exception } from 'exception-tree'
+import { Exception as ExceptionClass } from 'exception-tree'
+
+export const Exception = ExceptionClass
 
 export class Result <T> {
-	error: Exception | void
+	error: ExceptionClass | void
 	value: T | void
-	warning: Exception | void
-	e: Exception | void
+	warning: ExceptionClass | void
+	e: ExceptionClass | void
 	v: T | void
-	w: Exception | void
+	w: ExceptionClass | void
 
-	constructor (value: T|void, error?: Exception, warning?: Exception) {
+	constructor (value: T|void, error?: ExceptionClass, warning?: ExceptionClass) {
 		if (!error || !error.hasException) error = undefined
 		if (!warning || !warning.hasException) warning = undefined
 		if (error) value = undefined
