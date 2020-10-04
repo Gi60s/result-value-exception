@@ -26,5 +26,9 @@
   "homepage": "https://github.com/Gi60s/result-value-exception#readme",
   "dependencies": {
     "exception-tree": "^1.0.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3"
   }
 }
