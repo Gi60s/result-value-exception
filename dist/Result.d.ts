@@ -1,12 +1,15 @@
-import { Exception } from 'exception-tree';
+import { Exception as ExceptionClass } from 'exception-tree';
+export interface Exception extends ExceptionClass {
+}
+export declare const Exception: typeof ExceptionClass;
 export declare class Result<T> {
-    error: Exception | void;
+    error: ExceptionClass | void;
     value: T | void;
-    warning: Exception | void;
-    e: Exception | void;
+    warning: ExceptionClass | void;
+    e: ExceptionClass | void;
     v: T | void;
-    w: Exception | void;
-    constructor(value: T | void, error?: Exception, warning?: Exception);
-    [Symbol.iterator](): Generator<void | T | Exception, void, unknown>;
+    w: ExceptionClass | void;
+    constructor(value: T | void, error?: ExceptionClass, warning?: ExceptionClass);
+    [Symbol.iterator](): Generator<void | ExceptionClass | T, void, unknown>;
 }
 export default Result;

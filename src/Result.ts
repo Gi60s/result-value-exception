@@ -1,5 +1,7 @@
 import { Exception as ExceptionClass } from 'exception-tree'
 
+export interface Exception extends ExceptionClass {}
+
 export const Exception = ExceptionClass
 
 export class Result <T> {

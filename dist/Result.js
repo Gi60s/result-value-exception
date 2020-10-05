@@ -4,12 +4,14 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports"], factory);
+        define(["require", "exports", "exception-tree"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    exports.Result = void 0;
+    exports.Result = exports.Exception = void 0;
+    const exception_tree_1 = require("exception-tree");
+    exports.Exception = exception_tree_1.Exception;
     class Result {
         constructor(value, error, warning) {
             if (!error || !error.hasException)
