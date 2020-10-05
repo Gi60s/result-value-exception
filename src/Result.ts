@@ -1,18 +1,18 @@
-import { Exception as ExceptionClass } from 'exception-tree'
+import { Exception } from 'exception-tree'
 
-export interface Exception extends ExceptionClass {}
-
-export const Exception = ExceptionClass
+export {
+	Exception
+}
 
 export class Result <T> {
-	error: ExceptionClass | void
+	error: Exception | void
 	value: T | void
-	warning: ExceptionClass | void
-	e: ExceptionClass | void
+	warning: Exception | void
+	e: Exception | void
 	v: T | void
-	w: ExceptionClass | void
+	w: Exception | void
 
-	constructor (value: T|void, error?: ExceptionClass, warning?: ExceptionClass) {
+	constructor (value: T|void, error?: Exception, warning?: Exception) {
 		if (!error || !error.hasException) error = undefined
 		if (!warning || !warning.hasException) warning = undefined
 		if (error) value = undefined

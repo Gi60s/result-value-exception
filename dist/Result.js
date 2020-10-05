@@ -11,7 +11,7 @@
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.Result = exports.Exception = void 0;
     const exception_tree_1 = require("exception-tree");
-    exports.Exception = exception_tree_1.Exception;
+    Object.defineProperty(exports, "Exception", { enumerable: true, get: function () { return exception_tree_1.Exception; } });
     class Result {
         constructor(value, error, warning) {
             if (!error || !error.hasException)
