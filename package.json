@@ -1,6 +1,6 @@
 {
   "name": "result-value-exception",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Produce an iterable result that contains a value, an exception, and a warning.",
   "main": "./dist/Result.js",
   "types": "./dist/Result.d.ts",
